@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table {
+        width: 20%;
+        border-collapse: collapse;
+    }
+    td {
+        width: 33.333%;
+        border: 15px solid #222;
+    }
+    td::after {
+        content: '';
+        display: block;
+        margin-top: 100%;
+    }
+    td:first-of-type {
+        border-left-color: transparent;
+        border-top-color: transparent;
+    }
+    td:nth-of-type(2) {
+        border-top-color: transparent;
+    }
+    td:nth-of-type(3) {
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+    tr:nth-of-type(3) td {
+        border-bottom-color: transparent;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe Table</title>
+</head>
+<body>
+<table id="board">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table></body>
+</html>
