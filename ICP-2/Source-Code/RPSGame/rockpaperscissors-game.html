@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <!-- add selection, and wait time -->
+    <title>Welcome to my ROCK, Paper, Scissors game!</title>
+
+    <style>
+        .button {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #submitBtn {
+            background-color: limegreen;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+       *{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}::selection{background:#fb9fe5;text-shadow:none}a{color:#0088CC;text-decoration:none;outline:0}a:hover{color:#005580}a img{border:none}img{max-width:100%}html{font-size:100%}body{padding:5%;font:300 1.25em/1.6 monospace;background:#fff;color:#000;}h1{font-family:"Helvetica Neue",sans-serif;line-height:1;font-weight:300;margin-bottom:1em;}.game{padding:2em;background:#eee;}
+    </style>
+</head>
+<body>
+
+<h2>Name: <strong><span style="color:red">Duy Hoang Ho </span> </strong></h2>
+<h2>Class: <span style="color:red"> CSEE 5590: Web Development </span> </h2>
+<h2>Assignment: <span style="color:red">ICP-2 part 1</span></h2>
+
+<h1 style = "text-align: center">Welcome to my ROCK, Paper, Scissors game! </h1>
+<h3 style = "text-align: center;">Please press the <span style = "font-weight:bold;color:blue"> play </span> button to start playing!</h3>
+
+<div class="mainMenu">
+    <div id = "uChoiceUI" style = "text-align:center; ">
+        <input type="button" id = "playBtn" onclick = "hideForm()" class="button" value="LET'S PLAY!">
+        <form name = "myForm" id = "myForm" style="display:none">
+            <input type="radio" name="uChoice" value="ROCK">ROCK<br>
+            <input type="radio" name="uChoice" value="PAPER">PAPER<br>
+            <input type="radio" name="uChoice" value="SCISSORS">SCISSORS<br>
+            <input type="submit" id = "submitBtn" value="GO!!!">
+        </form>
+        <p id="result">RESULTS:</p>
+        <input type="button" id = "replayBtn" onclick="reload()"style="display:none;background-color:red" class="button" value="REPLAY!">
+    </div>
+
+    <script>
+        function reload(){
+            location.reload();
+        }
+        function hideForm() {
+            var x = document.getElementById("myForm");
+            var y = document.getElementById("playBtn");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.value = "CHOOSE YOUR WEAPON!";
+            } else {
+                x.style.display = "none";
+                y.value = "LET'S PLAY!";
+            }
+        }
+        //Function that randomly generates NPC's tool and determines win/loss of the match
+        //var userChoice = prompt("Do you choose ROCK, PAPER or SCISSORS?");
+            var f = document.getElementById('myForm');
+
+            f.onsubmit = function (e) {
+                e = e || window.event;
+                var et = e.target || e.srcElement;
+                //alert(e.preventDefault);
+                e.preventDefault();
+
+                for (var i = 0, il = et.length; i < il; i++) {
+                    if (et[i].name = 'uChoice' && et[i].checked) {
+                        uChoice = et[i].value;
+                    }
+                }
+
+
+                //Determines User's Choice
+                if (uChoice == 'ROCK') {
+                    document.body.style.backgroundColor = 'cyan';
+                } else if (uChoice == 'PAPER') {
+                    document.body.style.backgroundColor = 'pink';
+                }
+                //Generate NPC's choice
+                var NPCchoice = Math.random();
+                if (NPCchoice <= 1/3) {
+                    NPCchoice = "ROCK";
+                } else if(NPCchoice <= 2/3) {
+                    NPCchoice = "PAPER";
+                } else {
+                    NPCchoice = "SCISSORS";
+                }
+                var p = document.getElementById('result');
+                // Run the compare function
+                var results = winlose(uChoice, NPCchoice);
+                p.innerHTML = '<br>Your Choice: ' + uChoice + "<br>Computer Choice: " + NPCchoice ;
+                p.innerHTML += "<br><br>" + results;
+                var replayBtn = document.getElementById('replayBtn');
+                replayBtn.style.display = "inline";
+        }
+
+
+        // Compare user choice vs computer choice
+        function winlose(uchoice,npcchoice) {
+            if (uchoice == npcchoice) {
+                return "Well, it's a draw! Great minds think alike! Good Job!";
+            }
+            if (uchoice == "ROCK") {
+                if (npcchoice == "SCISSORS") {
+                    // player 1 wins
+                    return "CONGRATULATIONS!!! YOU WON!!!";
+                } else {
+                    // npc wins
+                    return "Unfortunately, you lost! NPC is OP!";
+                }
+            }
+            else if (uchoice == "PAPER") {
+                if (npcchoice == "ROCK") {
+                    // player 1 wins
+                    return "CONGRATULATIONS!!! YOU WON!!!";
+                } else {
+                    // npc wins
+                    return "Unfortunately, you lost! NPC is OP!";
+                }
+            }
+            else if (uchoice == "SCISSORS") {
+                if (npcchoice == "ROCK") {
+                    v
+                    return "Unfortunately, you lost! NPC is OP!";
+                } else {
+                    // npc wins
+                    return "CONGRATULATIONS!!! YOU WON!!!";
+                }
+            }
+        };
+
+
+    </script>
+
+</div>
+
+</body>
+</html>
