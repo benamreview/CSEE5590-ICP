@@ -1,0 +1,49 @@
+.topimg img {
+  float: left;
+  width: 90px;
+  height: 100px;
+}
+.nm {
+  text-align: right;
+  text-transform: uppercase;
+}
+.nm #name {
+  color: darkgrey;
+  font-size: 50px;
+}
+.nm #major {
+  color: grey;
+  font-size: 15px;
+}
+.middleimg img {
+  width: 100%;
+  height: 500px;
+}
+.bottomimg img {
+  width: 100%;
+  height: 150px;
+}
+.title {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Rambla', sans-serif;
+}
+.source {
+  color: #747704;
+  text-align: center;
+}
+#featured {
+  color:#BCBBBB;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:30px;
+}
+hr {
+  border: none;
+  clear:both;
+  display:block;
+  width: 95%;
+  background-color:gray;
+  height: 5px;
+}
