@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc8cc242-bca6-4a15-a8d4-3c382a87cd3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MockUp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MockUp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPSGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RPSGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPSGame/rockpaperscissors-game.html" beforeDir="false" afterPath="$PROJECT_DIR$/RPSGame/rockpaperscissors-game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +17,10 @@
     <session id="-1808816333">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -46,7 +46,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RPSGame/rockpaperscissors-game.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MockUp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="875">
               <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
             </state>
           </provider>
@@ -95,8 +95,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="513" />
-    <option name="height" value="305" />
+    <option name="width" value="410" />
+    <option name="height" value="244" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -104,6 +104,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,7 +126,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,18 +174,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549139485769</updated>
-      <workItem from="1549139486955" duration="896000" />
+      <workItem from="1549139486955" duration="1496000" />
+      <workItem from="1549330688379" duration="309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="896000" />
+    <option name="totallyTimeSpent" value="1805000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22075348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17597471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -212,13 +213,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MockUp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RPSGame/rockpaperscissors-game.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -228,6 +222,13 @@
             <element signature="n#style#0;n#span#0;n#h2#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h2#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MockUp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
         </state>
       </provider>
     </entry>
