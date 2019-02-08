@@ -42,7 +42,10 @@ input[type='text'] {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
+.information p {
+  font-size: 30px;
+  padding-left: 20px;
+}
 .search {
   text-align: center;
   margin: 50px auto;
