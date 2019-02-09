@@ -53,6 +53,8 @@ input[type='text'] {
 
 h2 {
   padding: 5px;
+  font-size: 40px;
+  font-weight:bold;
 }
 
 .profile {
@@ -68,4 +70,15 @@ h2 {
 
 .profile:hover {
   background-color: #b300b3;
+}
+#title {
+  color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 30;
+  font-size:60px
+}
+@keyframes example {
+  from {color: yellow;}
+  to {color: rebeccapurple;}
 }

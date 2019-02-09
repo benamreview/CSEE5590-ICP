@@ -3,7 +3,7 @@ function getGithubInfo(user) {
     // it now contains the response!)
     var xhttp =new XMLHttpRequest();
     var url = "https://api.github.com/search/users?q=" + user;
-    xhttp.open('GET', url, false);
+    xhttp.open('GET', url, false); //synchronous
     xhttp.send();
     return xhttp;
 }
@@ -23,7 +23,8 @@ function showUser(user) {
     $(".avatar").append(avatarImg);
     var informationStr = "<p style= \'font-size: 40px; font-weight: bold; \'>Profile Information</p><p> User ID: " + user.items[0].id + "</p><p>User's Score: " + user.items[0].score + "</p>"
     $(".information").append(informationStr);
-    var linkStr = "<p><a href=\"" + user.items[0].html_url + "\" target=\"_blank\" >User's Github URL</a></p>"
+    var linkStr = "<p><a style = \"color:blue\" href=\"" + user.items[0].html_url + "\" target=\"_blank\" >User's Github URL</a></p>"
+    console.log(linkStr);
     $(".information").append(linkStr);
 
 }
