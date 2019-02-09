@@ -2,7 +2,7 @@ function getGithubInfo(user) {
     //1. Create an instance of XMLHttpRequest class and send a GET request using it. The function should finally return the object(
     // it now contains the response!)
     var xhttp =new XMLHttpRequest();
-    var url = "https://api.github.com/search/users?q=" + user;
+    var url = "https://api.github.com/users/" + user;
     xhttp.open('GET', url, false); //synchronous
     xhttp.send();
     return xhttp;
@@ -15,15 +15,15 @@ function showUser(user) {
     $(".information").empty();
     console.log("in showUser");
     console.log(user);
-    console.log(user.items[0].avatar_url);
-    $("#name").text("Username: " + user.items[0].login);
-    var avatarUrl = user.items[0].avatar_url;
+    console.log(user.avatar_url);
+    $("#name").text("Username: " + user.login);
+    var avatarUrl = user.avatar_url;
     var avatarImg = "<img src=\"" + avatarUrl + "\" alt=\"Trulli\" width=\"500\" height=\"333\"/>"
     console.log(avatarImg);
     $(".avatar").append(avatarImg);
-    var informationStr = "<p style= \'font-size: 40px; font-weight: bold; \'>Profile Information</p><p> User ID: " + user.items[0].id + "</p><p>User's Score: " + user.items[0].score + "</p>"
+    var informationStr = "<p style= \'font-size: 40px; font-weight: bold; \'>Profile Information</p><p> User ID: " + user.id + "</p><p>Number of Repositories: " + user.public_repos + "</p>"
     $(".information").append(informationStr);
-    var linkStr = "<p><a style = \"color:blue\" href=\"" + user.items[0].html_url + "\" target=\"_blank\" >User's Github URL</a></p>"
+    var linkStr = "<p><a id = \"link\" style = \"color:blue\" href=\"" + user.html_url + "\" target=\"_blank\" >User's Github URL</a></p>"
     console.log(linkStr);
     $(".information").append(linkStr);
 
@@ -32,7 +32,10 @@ function showUser(user) {
 function noSuchUser(username) {
     //3. set the elements such that a suitable message is displayed
     console.log("in noSuchUser");
+    $(".avatar").empty();
+    $(".information").empty();
     $("#name").text("ERROR: USER NOT FOUND!");
+
 
 }
 

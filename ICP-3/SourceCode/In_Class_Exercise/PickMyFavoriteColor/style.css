@@ -111,12 +111,16 @@ footer #content {
 }
 
 .square {
+
   position: relative;
   height: 50px;
   width: 50px;
   animation-name: squareAnim;
   animation-duration: 2s;
   background-color: #555;
+}
+.square:hover {
+  transform: scale(1.1);
 }
 @keyframes squareAnim {
   from {top: -300px;}
@@ -134,7 +138,7 @@ footer #content {
 .flex-container > div {
   width: 90px;
   height: 70px;
-  margin:0px;
+  margin:4px;
 }
 #favorite{
   position: relative;
@@ -146,4 +150,13 @@ footer #content {
 @keyframes example {
   from {left: -300px;}
   to {left: 0px;}
+}
+#add-to-favorite:hover{
+  transform: scale(1.1);
+  background-color:lightgreen;
+}
+.color-code:hover{
+  font-weight:bold;
+  transform: scale(1.2);
+  color:yellow;
 }
