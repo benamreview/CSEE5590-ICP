@@ -111,11 +111,17 @@ footer #content {
 }
 
 .square {
+  position: relative;
   height: 50px;
   width: 50px;
+  animation-name: squareAnim;
+  animation-duration: 2s;
   background-color: #555;
 }
-
+@keyframes squareAnim {
+  from {top: -300px;}
+  to {top: 0px;}
+}
 .flex-container {
   width: 400px;
   height: 210px;
@@ -129,4 +135,15 @@ footer #content {
   width: 90px;
   height: 70px;
   margin:0px;
+}
+#favorite{
+  position: relative;
+  font-size:20px;
+  font-weight:bold;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {left: -300px;}
+  to {left: 0px;}
 }
