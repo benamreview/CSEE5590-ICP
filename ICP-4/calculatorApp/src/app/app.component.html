@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4 calc">
+      <p id="logo"> Basic Calculator - Duy Hoang Ho CSEE 5590 </p>
+      <div class="screen">
+        <p #equation id="equation" ngModel>{{currentEquation}}</p>
+        <p #number id="number" ngModel>{{currentString}}</p>
+      </div>
+      <!-- Each button is bound to a separate function call upon clicking-->
+      <div class="buttons">
+        <div class="button" (click)="appendNum(0)">0</div>
+        <div class="button" (click)="appendNum('=')">=</div>
+        <div class="button" (click)="appendNum('%')">%</div>
+        <div class="button op" (click)="appendNum('+')">+</div>
+        <div class="button" (click)="appendNum(1)">1</div>
+        <div class="button" (click)="appendNum(2)">2</div>
+        <div class="button" (click)="appendNum(3)">3</div>
+        <div class="button op" (click)="appendNum('-')">-</div>
+        <div class="button" (click)="appendNum(4)">4</div>
+        <div class="button" (click)="appendNum(5)">5</div>
+        <div class="button" (click)="appendNum(6)">6</div>
+        <div class="button op" (click)="appendNum('*')">*</div>
+        <div class="button" (click)="appendNum(7)">7</div>
+        <div class="button" (click)="appendNum(8)">8</div>
+        <div class="button" (click)="appendNum(9)">9</div>
+        <div class="button op" (click)="appendNum('/')">/</div>
+        <div class="button clear" (click)="appendNum('Clear')">Clear</div>
+      </div>
+    </div>
+  </div>
+</div>

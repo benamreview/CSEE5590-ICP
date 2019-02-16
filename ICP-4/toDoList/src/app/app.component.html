@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" height='300' alt="TodoImg" src="../assets/todolist.png"/>
+</div>
+<div class="container">
+    <form>
+        <h1 class="text-center text-success">To-do List</h1>
+        <div class="input-group-prepend">
+          <input type="text" #task class="form-control" placeholder="Add New Task" name="task" ngModel>
+          <span class="input-group-text" (click)="addTask(task.value)"><i class="material-icons">add</i></span>
+        </div>
+        <p>{{task.value}}</p>
+      <div class="data">
+        <ul class="list-instyled">
+          <!--Loop through the taskList (array) to display all the current saved task in array-->
+          <li *ngFor="let task of taskList">{{task}}
+            <!--if the trash button is clicked, current task will be deleted-->
+            <i (click)="deleteTask(task)" class="material-icons">delete</i>
+          </li>
+        </ul>
+      </div>
+    </form>
+
+</div>
+

@@ -1,0 +1,86 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body{
+  padding: 0;
+  margin: 0;
+}
+form{
+  max-width: 30em;
+  margin: 1em auto;
+  position: relative;
+  background: #f4f4f4;
+  padding: 2em 3em;
+}
+form h1, h1{
+  font-family: "Comic Sans MS";
+  color:limegreen;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  from {background-color: darkgreen;}
+  to {background-color: lime;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {color: darkgreen;}
+  to {color: lime;}
+}
+form input[type=text]::placeholder{
+  font-family: "Comic Sans MS";
+  color:#666;
+}
+form .data{
+  margin-top: 1em;
+}
+form .data li{
+  background: #fff;
+  border-left: 4px solid limegreen;
+  padding: 1em;
+  margin: 1em auto;
+  color: grey;
+  font-family: "Comic Sans MS";
+}
+form .data li:hover{
+  background: lime;
+  transform:scale(1.1);
+}
+form .data li i{
+  float: right;
+  color: #888;
+  cursor: pointer;
+}
+form .data li i:hover {
+  transform:scale(1.1);
+  color:red;
+}
+form .input-group-text{
+  background: limegreen;
+  border-radius: 15%;
+  width: 5em;
+  height: 4em;
+  padding: 1em 23px;
+  color: #fff;
+  position: absolute;
+  right: 13px;
+  top: 80px;
+  cursor: pointer;
+}
+form .input-group-text:hover {
+  background:lime;
+  transform: scale(1.1);
+}
+form .input-group-text i{
+  font-size: 2em;
+}
+form .form-control{
+  height: 3em;
+  font-family: "Raleway";
+}
+form .form-control:focus{
+  box-shadow: 0;
+}
