@@ -1,0 +1,59 @@
+<!--https://stackblitz.com/angular/xeeqnrovbny?file=src%2Fapp%2Fhero-form%2Fhero-form.component.html-->
+<div class="form-group">
+  <div [hidden]="submitted">
+  <form style="text-align: center" (ngSubmit)="onSubmit(languageForm)" #languageForm="ngForm">
+    <div class = 'row'>
+      <div class = "form-group col-lg-6 col-md-offset-3" >
+        <!--First Language Drop-down-->
+        <label for="lang1">First Language</label>
+        <select class="form-control" id="lang1" name = 'lang1' #lang1 ngModel>
+          <option value="" disabled selected="selected">Please select a language</option>
+          <option [value] = "item.short" *ngFor="let item of categories">{{item.long}}</option>
+        </select>
+        <!--Text needed for translation-->
+        <div class="form-group">
+          <label for="text">Text</label>
+          <textarea type="text"  class="form-control" id="text" required name = 'text' #text ngModel> </textarea>
+        </div>
+      </div>
+    </div>
+    <div class = 'row'>
+      <!--Second Language Drop-down-->
+      <div class = "form-group col-lg-6 col-md-offset-3" style="text-align: center">
+        <label for="lang2">Second Language</label>
+        <select class="form-control" id="lang2" name = 'lang2' #lang2 ngModel>
+          <option value="" disabled selected="selected">Please select a language</option>
+          <option [value] = "item.short" *ngFor="let item of categories">{{item.long}}</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="w3-button w3-aqua w3-round-xxlarge w3-xxlarge">Translate</button>
+  </form>
+  </div>
+</div>
+<!--Result Box that Shows Translated Text -->
+<div id = 'resultBox'[hidden]="!submitted">
+  <h2>Response:</h2>
+  <div class="row">
+    <div class="col-xs-3 col-md-offset-2">Original Language:</div>
+    <div class="col-xs-7 displayText">{{ lang1full }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-md-offset-2">Destination Language:</div>
+    <div class="col-xs-7 displayText">{{ lang2full }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-md-offset-2">Original Text:</div>
+    <div class="col-xs-7 displayText">{{ orgText }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3 col-md-offset-2">Translated Text: </div>
+    <div class="col-xs-7 displayText">{{ resultText }}</div>
+  </div>
+  <br>
+  <div class="button-form" style = 'text-align: center'>
+    <button class="w3-button w3-blue w3-round-xlarge w3-xxlarge" (click)="submitted=false">Edit</button>
+  </div>
+
+</div>
+

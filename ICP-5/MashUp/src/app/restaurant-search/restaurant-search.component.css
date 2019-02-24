@@ -1,0 +1,78 @@
+.parent-container {
+  position: relative;
+  height:100%;
+  width: 100%;
+}
+
+.child-container, h2, h3 {
+  color: Orange;
+  text-align: center;
+  position: center;
+  font-family: "Fira Code Retina";
+  transition-duration:1s;
+
+}
+.desc {
+  font-family: Georgia;
+  font-size: 17px;
+}
+
+.thumbnail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  min-width: 40%;
+  border-radius: 5px;
+}
+
+.thumbnail-description {
+  min-height: 40px;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+.input{
+  color: darkblue;
+  font-family: "Comic Sans MS";
+  font-size:20px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 4px solid red;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+#result {
+  color: darkorange;
+  font-family: "Comic Sans MS";
+  font-size:20px;
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 4px solid dodgerblue;
+  border-radius: 24px;
+  box-sizing: border-box;
+  align-content: center;
+  transform:scale(0.95);
+  transition-duration: 1s;
+}
+#result:hover {
+  transform:scale(1.00);
+
+}
+#searchBtn {
+  font-size:30px!important;
+  transform:scale(0.94);
+  transition-duration:0.75s;
+}
+#searchBtn:hover {
+  background-color: palevioletred!important;
+  color:white!important;
+  transform: scale(1.05);
+}
+h2:hover, h3:hover{
+  background-color:lightslategrey;
+}

@@ -1,0 +1,43 @@
+#text {
+  height:300px;
+}
+#resultBox {
+  color:white;
+  border-style: groove;
+  font-size:25px;
+  font-family: "Comic Sans MS";
+  transform: scale(0.9);
+  transition-duration:0.9s;
+}
+#resultBox h2 {
+  text-align: center;
+  font-size:50px;
+  font-family: Bahnschrift;
+}
+#resultBox:hover {
+  background-color:lightgreen;
+  transform: scale(1.0);
+}
+label{
+  width:100%;
+  margin: 10px 0px;
+  background-color:brown;
+  border-radius:15px;
+  font-family:"Comic Sans MS";
+  font-size:20px;
+  color:white;
+}
+option:checked {
+  background-color:lightblue!important;
+  margin-left: 25px;
+  border: 1px solid blue;
+}
+
+.displayText {
+  margin: -15px;
+  padding: 8px;
+  font-weight:bolder;
+  font-size:35px;
+  font-family:"Comic Sans MS";
+  color:yellow;
+}
