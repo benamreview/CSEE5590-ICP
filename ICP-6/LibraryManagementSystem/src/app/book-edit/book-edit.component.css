@@ -1,0 +1,26 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-full-width:nth-last-child(-n+1) {
+  margin-bottom: 10px;
+}
+
+.button-row {
+  margin: 10px 0;
+}
+.example-card {
+  max-width: 500px;
+}
+.example-header-image {
+  background-image: url('https://previews.123rf.com/images/leshkasmok/leshkasmok1408/leshkasmok140800035/30680675-book-single-flat-color-icon-vector-illustration-.jpg');
+  background-size: cover;
+}
+
+

@@ -1,0 +1,6 @@
+Things to remember when working in Angular 6:
+- Check book.js in routes and models folder to see if they are tied and bound together using Mongoose Model
+- Check if you have successfully connected to MongoDB
+- Check if book.js has methods defined in api.service.ts already such as Create, Update, Delete, and Read
+- Check app.module.ts to see if all components have been imported and properly declared
+- Check app.js for nodejs module import, mongoose, mongodb, and resource declaration
