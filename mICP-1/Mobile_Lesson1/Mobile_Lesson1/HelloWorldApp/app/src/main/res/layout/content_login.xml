@@ -22,7 +22,7 @@
         android:ems="10"
         android:hint="Username/Email"
         android:inputType="textEmailAddress"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:background="@drawable/textview"/>/>
 
     <EditText
@@ -37,7 +37,7 @@
         android:layout_alignLeft="@+id/txt_uname"
         android:layout_alignStart="@+id/txt_uname"
         android:layout_marginTop="31dp"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:background="@drawable/textview"/>
 
     <Button
@@ -78,7 +78,8 @@
         android:layout_marginBottom="38dp"
         android:visibility="invisible"
         android:textColor="#e12c2c"
-        android:singleLine="true"
+        android:singleLine="false"
         android:layout_above="@+id/btn_login"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"/>
 </RelativeLayout>

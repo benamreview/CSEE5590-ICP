@@ -1,11 +1,13 @@
 package com.csee5590.helloworldapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,7 +18,9 @@ import android.widget.TextView;
 
 //AppCompatActivity:
 public class LoginActivity extends AppCompatActivity {
-
+    EditText usernameCtrl;
+    EditText passwordCtrl;
+    TextView errorText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,45 @@ public class LoginActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         RunAnimation();
+        usernameCtrl = (EditText)findViewById(R.id.txt_uname);
+        passwordCtrl = (EditText) findViewById(R.id.txt_Pwd);
+        errorText = (TextView)findViewById(R.id.lbl_Error);
+        /**
+         * This function will make sure that the error message disappears
+         * before user retypes the username/password
+         */
+        usernameCtrl.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        usernameCtrl.requestFocus();
+                        errorText.setVisibility(View.GONE);
+                        // PRESSED
+                        return true; // if you want to handle the touch event
+                    case MotionEvent.ACTION_UP:
+                        // RELEASED
+                        return true; // if you want to handle the touch event
+                }
+                return false;
+            }
+        });
+        passwordCtrl.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                switch(event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        passwordCtrl.requestFocus();
+                        errorText.setVisibility(View.GONE);
+                        // PRESSED
+                        return true; // if you want to handle the touch event
+                    case MotionEvent.ACTION_UP:
+                        // RELEASED
+                        return true; // if you want to handle the touch event
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -52,9 +95,6 @@ public class LoginActivity extends AppCompatActivity {
     //to the next page. Username and password are determined by the 2 variables "userName" and "password"
     public void checkCredentials(View v)
     {
-        EditText usernameCtrl = (EditText)findViewById(R.id.txt_uname);
-        EditText passwordCtrl = (EditText) findViewById(R.id.txt_Pwd);
-        TextView errorText = (TextView)findViewById(R.id.lbl_Error);
         String userName = usernameCtrl.getText().toString();
         String password = passwordCtrl.getText().toString();
 
@@ -82,6 +122,10 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * this function animates the Login title by continuously scaling it back and forth
+     */
     private void RunAnimation()
     {
         Animation a = AnimationUtils.loadAnimation(this, R.anim.fade_in);
@@ -90,4 +134,5 @@ public class LoginActivity extends AppCompatActivity {
         tv.clearAnimation();
         tv.startAnimation(a);
     }
+
 }
