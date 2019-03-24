@@ -1,0 +1,159 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.vijaya.myorder.MainActivity">
+
+        <EditText
+            android:id="@+id/user_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:ems="15"
+            android:inputType="textCapWords"
+            android:textColor="#0000FF"
+            android:textSize='20sp' />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/base" />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/pepperoni_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16sp"
+                android:paddingLeft="24dp"
+                android:text="@string/pepperoni"
+                android:textSize="16sp"
+                android:buttonTint="#0000FF"/>
+            <RadioButton
+                android:id="@+id/philly_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16sp"
+                android:paddingLeft="24dp"
+                android:text="@string/philly"
+                android:textSize="16sp"
+                android:buttonTint="#0000FF"/>
+            <RadioButton
+                android:id="@+id/chicago_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16sp"
+                android:paddingLeft="24dp"
+                android:text="@string/chicago"
+                android:textSize="16sp"
+                android:buttonTint="#0000FF"/>
+            <RadioButton
+                android:id="@+id/hawaiian_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16sp"
+                android:paddingLeft="24dp"
+                android:text="@string/hawaiian"
+                android:textSize="16sp"
+                android:buttonTint="#0000FF"/>
+        </RadioGroup>
+        <TextView
+        style="@style/HeaderTextStyle"
+        android:text="@string/toppings" />
+        <CheckBox
+            android:id="@+id/pineapple_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:paddingLeft="24dp"
+            android:text="@string/pineapple"
+            android:textSize="16sp"
+            android:buttonTint="#00FFFF"/>
+        <CheckBox
+            android:id="@+id/bacon_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:paddingLeft="24dp"
+            android:text="@string/bacon"
+            android:textSize="16sp"
+            android:buttonTint="#00FFFF"/>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/quantity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="#EEE8AA"
+                android:buttonTint="#EEE8AA"
+                android:onClick="decrement"
+                android:text="-"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/initial_quantity_value"
+                android:textSize = "30sp"
+                android:textColor="#ADFF2F" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#EEE8AA"
+                android:buttonTint="#EEE8AA"
+                android:onClick="increment"
+                android:text="+"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/new_button2"
+                android:onClick="submitOrder"
+                android:text="@string/summary"
+                android:buttonTint="#EEE8AA"/>
+
+            <Button
+                android:id="@+id/btn_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/new_button2"
+                android:onClick="submitOrder"
+                android:text="@string/order"
+                android:buttonTint="#EEE8AA"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
