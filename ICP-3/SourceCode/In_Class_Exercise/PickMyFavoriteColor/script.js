@@ -13,7 +13,7 @@ function addBox(color) {
 
 $(document).ready(function(){
 
-    //1.As the page loads add each color in the colors array to the div '#colors'
+    //1.As the page loads, add each color in the colors array to the div '#colors'
     $( ".square" ).each(function(index) {
         console.log(colors[index]);
         $(this).css('background-color', colors[index]);
