@@ -59,6 +59,12 @@ public class EmployerActivity extends AppCompatActivity {
                 deleteAllfromDB();
             }
         });
+        binding.clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearInput();
+            }
+        });
     }
 
     private void saveToDB() {
@@ -224,5 +230,11 @@ public class EmployerActivity extends AppCompatActivity {
         SQLiteDatabase database = new SampleDBSQLiteHelper(this).getReadableDatabase();
         database.execSQL("delete from "+ SampleDBContract.Employer.TABLE_NAME);
         Toast.makeText(this, "Deleted All Successfully", Toast.LENGTH_LONG).show();
+    }
+    private void clearInput(){
+        binding.nameEditText.setText("");
+        binding.descEditText.setText("");
+        binding.foundedEditText.setText("");
+        Toast.makeText(this, "Content Cleared Successfully", Toast.LENGTH_LONG).show();
     }
 }

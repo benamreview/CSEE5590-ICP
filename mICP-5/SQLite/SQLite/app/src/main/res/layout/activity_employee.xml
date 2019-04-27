@@ -149,6 +149,13 @@
                 android:layout_below="@+id/saveButton"
                 android:layout_marginTop="-30dp"
                 android:text="@string/deleteall" />
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/nameInputLayout"
+                android:layout_alignTop="@+id/deleteButton"
+                android:text="@string/clear" />
         </RelativeLayout>
     </ScrollView>
 </layout>

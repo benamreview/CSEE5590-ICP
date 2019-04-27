@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">SQLite</string>
+    <string name="app_name">Employment System</string>
     <string name="company_name">Company Name</string>
     <string name="description">Description</string>
     <string name="founded_date_e_g_23_04_2016">Founded Date (e.g 23/04/2016)</string>
     <string name="save">Save</string>
     <string name="edit">Edit</string>
+    <string name="clear">Clear</string>
     <string name="delete">Delete</string>
     <string name="deleteall">Delete All</string>
     <string name="search">Search</string>
