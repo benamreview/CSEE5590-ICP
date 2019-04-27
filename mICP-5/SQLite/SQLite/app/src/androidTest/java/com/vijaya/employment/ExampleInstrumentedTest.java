@@ -1,4 +1,4 @@
-package com.vijaya.sqlite;
+package com.vijaya.employment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

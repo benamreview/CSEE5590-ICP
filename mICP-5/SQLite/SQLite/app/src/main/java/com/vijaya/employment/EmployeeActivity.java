@@ -1,5 +1,6 @@
-package com.vijaya.sqlite;
+package com.vijaya.employment;
 
+import android.animation.ObjectAnimator;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,7 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.vijaya.sqlite.databinding.ActivityEmployeeBinding;
+import com.vijaya.employment.databinding.ActivityEmployeeBinding;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -268,5 +269,35 @@ public class EmployeeActivity extends AppCompatActivity {
         binding.employedEditText.setText("");
         binding.employerSpinner.setSelection(0);
         Toast.makeText(this, "Content Cleared Successfully", Toast.LENGTH_LONG).show();
+    }
+    public void animate(){
+        int duration = 2500;
+        float left = -300f;
+        float right = 300f;
+        float up = -300f;
+        float down = 300f;
+        ObjectAnimator animation = ObjectAnimator.ofFloat(binding.searchButton, "translationX", left, 0f);
+        animation.setDuration(duration);
+        animation.start();
+        animation = ObjectAnimator.ofFloat(binding.saveButton, "translationX", right, 0f);
+        animation.setDuration(duration);
+        animation.start();
+        animation = ObjectAnimator.ofFloat(binding.clearButton, "translationX", left, 0f);
+        animation.setDuration(duration);
+        animation.start();
+        animation = ObjectAnimator.ofFloat(binding.deleteAllButton, "translationX", right, 0f);
+        animation.setDuration(duration);
+        animation.start();
+        animation = ObjectAnimator.ofFloat(binding.deleteButton, "translationY", up, 0f);
+        animation.setDuration(duration);
+        animation.start();
+        animation = ObjectAnimator.ofFloat(binding.editButton, "translationY", down, 0f);
+        animation.setDuration(duration);
+        animation.start();
+    }
+    public void onResume(){
+        super.onResume();
+        animate();
+
     }
 }

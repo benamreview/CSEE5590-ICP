@@ -16,7 +16,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
-            tools:context="com.vijaya.sqlite.EmployerActivity">
+            tools:context="com.vijaya.employment.EmployerActivity">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/nameInputLayout"
@@ -61,6 +61,7 @@
                 android:id="@+id/saveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/new_button2"
                 android:layout_alignEnd="@+id/nameInputLayout"
                 android:layout_below="@+id/foundedInputLayout"
                 android:text="@string/save" />
@@ -69,6 +70,7 @@
                 android:id="@+id/editButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/new_button3"
                 android:layout_below="@+id/foundedInputLayout"
                 android:layout_centerHorizontal="true"
                 android:text="@string/edit" />
@@ -77,6 +79,7 @@
                 android:id="@+id/searchButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/new_button5"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/foundedInputLayout"
@@ -95,6 +98,7 @@
                 android:id="@+id/deleteButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/new_button"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="234dp"
@@ -104,6 +108,7 @@
                 android:id="@+id/deleteAllButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/new_button"
                 android:layout_alignEnd="@+id/nameInputLayout"
                 android:layout_alignTop="@+id/deleteButton"
                 android:text="@string/deleteall" />
@@ -112,6 +117,7 @@
                 android:id="@+id/clearButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/new_button4"
                 android:layout_alignLeft="@+id/nameInputLayout"
                 android:layout_alignTop="@+id/deleteButton"
                 android:text="@string/clear" />

@@ -1,4 +1,4 @@
-package com.vijaya.sqlite;
+package com.vijaya.employment;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.vijaya.sqlite.databinding.EmployerListItemBinding;
+import com.vijaya.employment.databinding.EmployerListItemBinding;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
