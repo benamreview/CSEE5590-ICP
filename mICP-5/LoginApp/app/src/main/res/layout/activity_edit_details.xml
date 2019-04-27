@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#E3F2F9"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.csee5590.lab3.SignUpActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Major"
+        android:layout_alignTop="@+id/txt_major"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_phone"
+        android:singleLine="true"
+        android:text="Phone"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_university"
+        android:singleLine="true"
+        android:text="University"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_age"
+        android:text="Age"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/txt_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_Header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Username/Email"
+        android:inputType="textEmailAddress"
+        android:textSize="25sp"
+        android:background="@drawable/textview"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/lbl_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_uname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowRadius="5"
+        android:singleLine="false"
+        android:text="Personal Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/txt_name"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_Heading"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview"
+        android:ems="10"
+        android:hint="First/Last Name"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txt_age"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txt_phone"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_age"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txt_university"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_below="@+id/txt_phone"
+        android:layout_marginLeft="110dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview"
+        android:ems="10"
+        android:hint="University/Organization"
+        android:inputType="textCapSentences"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/txt_major"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_university"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textview"
+        android:ems="10"
+        android:hint="Major"
+        android:inputType="textCapSentences"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_apply"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/new_button2"
+        android:text="Apply Change" />
+
+    <TextView
+        android:id="@+id/lbl_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowRadius="5"
+        android:singleLine="false"
+        android:text="Account Details"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/lbl_Error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_signup"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false"
+        android:text="Invalid Username/Password!"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#e12c2c"
+        android:textSize="15sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_name"
+        android:text="Name"
+        android:textSize="15sp" />
+
+</RelativeLayout>

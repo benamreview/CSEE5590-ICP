@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.csee5590.lab3.LoginActivity"
+    tools:showIn="@layout/activity_login">
+
+    <EditText
+        android:id="@+id/txt_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_Header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Username/Email"
+        android:inputType="textEmailAddress"
+        android:textSize="25sp"
+        android:background="@drawable/textview"/>/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txt_Pwd"
+        android:hint="Password"
+        android:password="true"
+        android:layout_below="@+id/txt_uname"
+        android:layout_alignLeft="@+id/txt_uname"
+        android:layout_alignStart="@+id/txt_uname"
+        android:layout_marginTop="31dp"
+        android:textSize="25sp"
+        android:background="@drawable/textview"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+        android:background="@drawable/new_button2"
+        android:text="Sign in" />
+
+    <TextView
+        android:id="@+id/lbl_Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowRadius="5"
+        android:singleLine="false"
+        android:text="Login"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp" />/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Invalid Username/Password!"
+        android:id="@+id/lbl_Error"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="38dp"
+        android:visibility="invisible"
+        android:textColor="#e12c2c"
+        android:singleLine="false"
+        android:layout_above="@+id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="199dp"
+        android:layout_height="225dp"
+        android:layout_above="@+id/lbl_Error"
+        android:layout_below="@+id/txt_Pwd"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="97dp"
+        android:layout_marginBottom="-25dp"
+        tools:srcCompat="@tools:sample/avatars" />
+</RelativeLayout>
