@@ -22,7 +22,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQ_CODE_SPEECH_INPUT = 100;
-    private TextView mVoiceInputTv, mSubText;
+    private TextView mVoiceInputTv, mSubText, mName;
     private ImageButton mSpeakBtn;
     private TextToSpeech TTSSpeaker;
     private static final String NAME = "name";
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mSubText = (TextView) findViewById(R.id.textView);
         mVoiceInputTv = (TextView) findViewById(R.id.voiceInput);
+        mName = (TextView) findViewById(R.id.name);
         mSpeakBtn = (ImageButton) findViewById(R.id.btnSpeak);
         mSpeakBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         hideUI();
+
         TTSSpeaker=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
                     TTSSpeaker.setLanguage(Locale.UK);
-                    TTSSpeaker.speak("Hello! I'm Superman", TextToSpeech.QUEUE_FLUSH, null);
+                    String Greetings = "Hello! I'm Superman! How can I help you?";
+                    TTSSpeaker.speak(Greetings, TextToSpeech.QUEUE_FLUSH, null);
                     showUI();
                 }
             }
@@ -87,12 +90,17 @@ public class MainActivity extends AppCompatActivity {
     public void onPause(){
         super.onPause();
     }
+    public void onStop(){
+        super.onStop();
+        TTSSpeaker.shutdown();
+    }
     public void Answer(String Str){
         Log.d("Str" , Str.toLowerCase());
-        String symptoms = "I totally understand. Please drop this class!";
-        String medicine = "I think you should take a break! Programmers tend to have really serious back pains!.";
+        String symptoms = "I totally understand. Please ... drop this class!";
+        String medicine = "I think you should take a break! Programmers tend to have really serious back pains!";
         String time;
         String thank ;
+        String nameResponse;
         if (Str.toLowerCase().equals("hello")){
             TTSSpeaker.speak("What is your name?", TextToSpeech.QUEUE_FLUSH, null);
         }
@@ -101,8 +109,9 @@ public class MainActivity extends AppCompatActivity {
             int index = Str.indexOf("name is");
             if (index != -1) {
                 // it contains "name is"
-                String name = Str.substring(index + 7, Str.length());
-                TTSSpeaker.speak("Your name is " + name, TextToSpeech.QUEUE_FLUSH, null);
+                String name =  Str.substring(index + 7, Str.length());
+                nameResponse = "Oh okay! I don't care about who you are but I will save your name here! Your name is " + Str.substring(index + 7, Str.length());
+                TTSSpeaker.speak(nameResponse, TextToSpeech.QUEUE_FLUSH, null);
                 setStoredName(name);
 
             }
@@ -121,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (Str.toLowerCase().contains("time")){
             //extract and save name
-            SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm a");//dd/MM/yyyy
+            SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm a", Locale.US); //Hour:minutes AM/PM
             Date now = new Date();String[] strDate = sdfDate.format(now).split(":");
             if(strDate[1].contains("00")) {
                 strDate[1] = "o'clock";
@@ -141,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
         preferences = getSharedPreferences(PREFS,0);
         editor = preferences.edit();
         editor.putString(NAME,name).apply();
+        mName.setText("Current User's Name: " + name);
         editor.commit();
     }
     private String getStoredName(){
@@ -168,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 mSpeakBtn.setVisibility(View.VISIBLE);
                 mSubText.setVisibility(View.VISIBLE);
             }
-        }, 3200);
+        }, 4500);
 
     }
 }
